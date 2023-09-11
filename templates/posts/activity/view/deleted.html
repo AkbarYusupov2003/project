@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static i18n mptt_tags %}
+{% block title %}{% trans 'Activity details' %}{% endblock %}
+{% block content %}
+  <div class="container my-border my-round mb-5">
+    <div class="row">
+      <h2 class="text-center mt-3">{% trans 'Activity was deleted' %}</h2>
+    </div>
+  </div>
+{% endblock %}

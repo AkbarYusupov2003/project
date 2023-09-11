@@ -1,0 +1,95 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display:none;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #4E89EF;
+}
+
+#base-navbar {
+  background-color: #4E89EF;
+}
+
+my-button {
+  position: relative;
+}
+
+.notifications {
+    color: #fff;
+    background: #d42114;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+    height: 15px;
+    width: 14px;
+    position: absolute;
+    box-sizing: content-box;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-border {
+   border:1px solid #c7c7c7;
+}
+
+.my-round {
+  border-radius:44px 44px 44px 44px
+}
+
+.body-form input:focus {
+  border-color: #1497ff;
+  box-shadow: none;
+}
+
+.body-form select:focus {
+  border-color: #1497ff;
+  box-shadow: none;
+}
+
+.body-form textarea:focus {
+  border-color: #1497ff;
+  box-shadow: none;
+}
+
+.bootstrap-select > .btn {
+  background-color: #FFF !important;
+  border-color: #ced4da;
+}
+
+.form-control[disabled] {
+   background-color: white;
+}
+
+.filter-option-inner-inner{
+  color: black;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu{
+  top:58px;
+  left:0px;
+  padding:10px;
+}
+
+/* Footer */
+.footer > div > div > ul > li{
+    padding-bottom:8px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+html, body, p, div{
+    font-family: 'Source Sans Pro', sans-serif;
+}

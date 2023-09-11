@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans 'Project sections' %}{% endblock %}
+{% block content %}
+  <div class="container mb-5">
+    <div class="row text-break">
+      <h5 class="mb-3">
+        {% trans 'After registration, you will be redirected to the main page of the project. On the main page, you can search for suitable activities by filters or recommendations.' %}
+      </h5>
+      <h5 class="my-3 fw-bold">
+        {% trans 'The project sections are located on the right side of the navigation bar:' %}
+      </h5>
+      <h5 class="mb-3">
+        {% trans '1. Your activities. The section for managing your activities, do not forget to delete the activity after you have found a companion.' %}
+      </h5>
+      <h5 class="mb-3">
+        {% trans '2. Manage replies. A section for viewing the replies made by you, as well as managing the replies that are made to you.' %}
+      </h5>
+      <h5 class="mb-3">
+        {% trans '3. Communication. Discussion of the implementation of the activity.' %}
+      </h5>
+      <h5>
+        {% trans '4. Account settings.' %}
+      </h5>
+    </div>
+  </div>
+{% endblock %}

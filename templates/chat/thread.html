@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans 'Communication' %}{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'chat/css/index.css' %}">
+  <script src="{% static 'chat/js/thread.js' %}"></script>
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div id="from_another_thread" class="bg-primary px-3 py-2 mb-3 text-white rounded text-center">
+      {% trans 'New message was received from another thread, please reload the page' %}
+    </div>
+    <div id="chat-row" class="row body-form no-gutters rounded-4">
+      <div class="col-4 threads-body p-0">
+        <div id="users-container">
+          <h5 id="buddy-username" class="py-2 ps-1 mb-0 text-break">
+            <span class="text-primary text-decoration-none text-break mb-0">
+              {{ buddy.username }}
+            </span>
+          </h5>
+          {% for thread in threads %}
+            <h5 class="py-2 ps-1 mb-0 text-break">
+              <a href="{% url 'chat:thread' thread.uuid %}" class="text-decoration-none text-break mb-0">
+                {{ thread.username }}
+                {% if thread.new_messages %}<span class="new-message h6">({{ thread.new_messages }})</span>{% endif %}
+              </a>
+            </h5>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-8 chat-body ps-0 pe-0">
+        <input type="hidden" id="own_pk" value="{{ request.user.pk }}">
+        <input type="hidden" id="buddy_pk" value="{{ buddy.pk }}">
+        <div id="selected-user" class="py-2">
+          <p class="mb-1 px-2">
+            <a href="{% url 'accounts:account-detail' buddy.pk  %}" class="fw-bold text-break text-decoration-none">{{ buddy.username }}</a>
+            <a type="button" class="float-end" data-bs-toggle="modal" data-bs-target="#settingsModal">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 512 512">
+                <path fill="#808080" d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/>
+              </svg>
+            </a>
+          </p>
+        </div>
+        <div id="messages-body" class="p-1">
+          <div class="text-center my-2 text-break border">
+            <span>
+              <span class="fw-bold">{{ current_thread.candidate.username }}</span>
+              {% trans 'accepted to' %}
+              <a href="{% url 'posts:activity-detail' current_thread.activity.pk %}" class="text-decoration-none">{% trans 'activity' %}</a>
+              <br>
+              <small class="mb-0 text-secondary">{{ current_thread.created_at }}</small>
+            </span>
+          </div>
+          {% for message in current_messages %}
+            {% if message.owner == request.user %}
+              <div class="own-message text-dark text-break">
+                {{ message.message }}<br>
+                <small class="mb-0 text-secondary">{{ message.created_at }}</small>
+              </div>
+            {% else %}
+              <div class="buddy-message text-dark text-break">
+                {{ message.message }}<br>
+                <small class="mb-0 text-secondary">{{ message.created_at }}</small>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="form-group my-2 px-1">
+          <form id="send-message-form">
+            <div class="input-group">
+              <input type="text" id="input-message" required class="form-control type_msg rounded" placeholder="{% trans 'Message' %}" maxlength="2048">
+              <div class="input-group-append">
+                <button id="submit-message" class="btn btn-primary" type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path fill="white" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="disconnected" class="btn btn-danger px-3 py-2 mt-3 text-white rounded text-center hide">
+      {% trans 'You were disconnected from thread, please reload the page' %}
+    </div>
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <label class="form-label">{% trans 'Thread status' %}</label>
+            <select id="thread_status" class="form-select">
+              <option selected>{% trans 'active' %}</option>
+              <option value="deactivate">{% trans 'readonly mode without recovery' %}</option>
+            </select>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button class="btn btn-danger mx-2" data-bs-dismiss="modal">{% trans 'Cancel' %}</button>
+            <button class="btn btn-primary mx-2" id="thread_status_submit" data-bs-dismiss="modal">{% trans 'Сonfirm' %}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

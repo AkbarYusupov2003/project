@@ -1,0 +1,22 @@
+.activity-card {
+  background-color: #F2F2F2;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+
+.manage-card {
+  box-shadow: 5px 5px 5px #aaaaaa;
+  border: 2px outset #c7c7c7;
+}
+
+.load-more {
+  background-color: #565E65;
+}
+
+#manage-filter-apply {
+  width: 100%;
+}
+
+.activity-owner-list {
+  background-color: #F2F2F2;
+}

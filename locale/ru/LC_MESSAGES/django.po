@@ -1,0 +1,1104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-06 11:58+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\accounts\forms.py:15 .\accounts\forms.py:96 .\accounts\forms.py:123
+#: .\accounts\forms.py:176 .\accounts\models.py:39
+#: .\templates\accounts\password_reset\reset.html:17 .\templates\base.html:68
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: .\accounts\forms.py:20 .\accounts\forms.py:100 .\accounts\forms.py:181
+#: .\templates\accounts\password_reset\reset.html:18
+msgid "Enter the email"
+msgstr "Введите адрес электронной почты"
+
+#: .\accounts\forms.py:25 .\accounts\forms.py:186 .\accounts\forms.py:251
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\accounts\forms.py:31 .\accounts\forms.py:191
+msgid "From 4 to 32 characters"
+msgstr "От 4 до 32 символов"
+
+#: .\accounts\forms.py:36 .\accounts\forms.py:196 .\posts\forms.py:66
+#: .\posts\forms.py:170 .\posts\forms.py:257
+msgid "Select country"
+msgstr "Выберите страну"
+
+#: .\accounts\forms.py:38 .\accounts\forms.py:198 .\accounts\models.py:52
+#: .\posts\forms.py:68 .\posts\forms.py:172 .\posts\forms.py:259
+#: .\posts\models.py:112
+msgid "Country"
+msgstr "Страна"
+
+#: .\accounts\forms.py:52 .\accounts\forms.py:211 .\accounts\models.py:47
+msgid "System Language"
+msgstr "Язык Системы"
+
+#: .\accounts\forms.py:61 .\accounts\forms.py:105
+msgid "Password"
+msgstr "Пароль"
+
+#: .\accounts\forms.py:67 .\accounts\forms.py:78 .\accounts\forms.py:157
+#: .\accounts\forms.py:168
+msgid "From 8 to 64 characters"
+msgstr "От 8 до 64 символов"
+
+#: .\accounts\forms.py:72 .\accounts\forms.py:162
+msgid "Repeat Password"
+msgstr "Повторите пароль"
+
+#: .\accounts\forms.py:91
+msgid "Passwords are different"
+msgstr "Пароли отличаются друг от друга"
+
+#: .\accounts\forms.py:111
+msgid "Enter the password"
+msgstr "Введите пароль"
+
+#: .\accounts\forms.py:133
+msgid "Unfortunately we can not find that email address"
+msgstr "К сожалению, мы не можем найти этот адрес электронной почты"
+
+#: .\accounts\forms.py:151
+msgid "New Password"
+msgstr "Новый Пароль"
+
+#: .\accounts\forms.py:220 .\accounts\forms.py:263 .\accounts\models.py:54
+#: .\posts\forms.py:55 .\posts\forms.py:158 .\posts\models.py:101
+msgid "Description"
+msgstr "Описание"
+
+#: .\accounts\forms.py:226 .\posts\forms.py:60 .\posts\forms.py:164
+msgid "Up to 2048 characters"
+msgstr "До 2048 символов"
+
+#: .\accounts\forms.py:232
+msgid "Your Skills"
+msgstr "Ваши Навыки"
+
+#: .\accounts\forms.py:258
+msgid "From 4 to 64 characters"
+msgstr "От 4 до 64 символов"
+
+#: .\accounts\forms.py:269
+msgid "Empty"
+msgstr "Пусто"
+
+#: .\accounts\forms.py:275 .\accounts\models.py:57
+msgid "Skills"
+msgstr "Навыки"
+
+#: .\accounts\models.py:41
+msgid "Timezone"
+msgstr "Часовой Пояс"
+
+#: .\accounts\models.py:60 .\templates\chat\thread.html:93
+msgid "active"
+msgstr "активный"
+
+#: .\accounts\models.py:63
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: .\accounts\tasks.py:21
+msgid "Activate your account"
+msgstr "Активируйте свой аккаунт"
+
+#: .\accounts\tasks.py:36
+msgid "Reset your password"
+msgstr "Cбросьте свой пароль"
+
+#: .\chat\models.py:15 .\posts\models.py:150 .\posts\models.py:183
+msgid "Activity"
+msgstr "Активность"
+
+#: .\chat\models.py:20 .\chat\models.py:51 .\posts\models.py:90
+#: .\posts\models.py:141 .\posts\models.py:174
+msgid "Owner"
+msgstr "Владелец"
+
+#: .\chat\models.py:26
+msgid "Candidate"
+msgstr "Кандидат"
+
+#: .\chat\models.py:31 .\posts\models.py:115 .\posts\models.py:154
+#: .\posts\models.py:187
+msgid "Updated at"
+msgstr "Изменено"
+
+#: .\chat\models.py:34 .\posts\models.py:118 .\posts\models.py:157
+#: .\posts\models.py:190
+msgid "Created at"
+msgstr "Создано"
+
+#: .\chat\models.py:36
+msgid "Is Active"
+msgstr "Активен ли"
+
+#: .\chat\models.py:46
+msgid "Thread"
+msgstr "Чат"
+
+#: .\chat\models.py:53 .\templates\chat\readonly_thread.html:69
+#: .\templates\chat\thread.html:71 .\templates\posts\main.html:145
+msgid "Message"
+msgstr "Сообщение"
+
+#: .\config\settings\core.py:123 .\posts\utils.py:24
+msgid "English"
+msgstr "Английский"
+
+#: .\config\settings\core.py:123 .\posts\utils.py:82
+msgid "Russian"
+msgstr "Русский"
+
+#: .\posts\forms.py:12 .\posts\forms.py:18
+msgid "Yes"
+msgstr "Да"
+
+#: .\posts\forms.py:13 .\posts\forms.py:19
+msgid "No"
+msgstr "Нет"
+
+#: .\posts\forms.py:17 .\templates\posts\activity\manage\list.html:16
+msgid "Any"
+msgstr "Не важно"
+
+#: .\posts\forms.py:25 .\posts\forms.py:246
+msgid "Language of activity"
+msgstr "Язык активности"
+
+#: .\posts\forms.py:35 .\posts\forms.py:136 .\posts\models.py:97
+msgid "Title"
+msgstr "Наименование"
+
+#: .\posts\forms.py:41 .\posts\forms.py:143
+msgid "From 8 to 128 characters"
+msgstr "От 8 до 128 символов"
+
+#: .\posts\forms.py:46 .\posts\forms.py:148 .\posts\forms.py:265
+#: .\posts\models.py:99 .\posts\models.py:178
+msgid "Type"
+msgstr "Тип"
+
+#: .\posts\forms.py:72 .\posts\forms.py:177 .\posts\forms.py:276
+#: .\posts\models.py:111
+msgid "Is Online"
+msgstr "Онлайн"
+
+#: .\posts\forms.py:77 .\posts\forms.py:183 .\posts\models.py:113
+msgid "Location"
+msgstr "Локация"
+
+#: .\posts\forms.py:82 .\posts\forms.py:189
+msgid "Up to 128 characters"
+msgstr "До 128 символов"
+
+#: .\posts\forms.py:87 .\posts\forms.py:194 .\posts\forms.py:282
+msgid "Programming areas"
+msgstr "Сферы программирования"
+
+#: .\posts\forms.py:98 .\posts\forms.py:206 .\posts\forms.py:294
+msgid "Global areas"
+msgstr "Глобальные сферы"
+
+#: .\posts\forms.py:110 .\posts\forms.py:219 .\posts\forms.py:306
+#: .\posts\models.py:109
+msgid "Expected skills"
+msgstr "Ожидаемые навыки"
+
+#: .\posts\forms.py:266
+msgid "Select type"
+msgstr "Выберите тип"
+
+#: .\posts\models.py:14 .\posts\models.py:36 .\posts\models.py:58
+msgid "Parent"
+msgstr "Родитель"
+
+#: .\posts\models.py:20 .\posts\models.py:42 .\posts\models.py:64
+msgid "Name"
+msgstr "Наименование"
+
+#: .\posts\models.py:84
+msgid "Project Development"
+msgstr "Разработка проекта"
+
+#: .\posts\models.py:85
+msgid "Collaborative Learning"
+msgstr "Совместное обучение"
+
+#: .\posts\models.py:86
+msgid "Problem-Solving"
+msgstr "Решение задач"
+
+#: .\posts\models.py:94
+msgid "Language"
+msgstr "Язык"
+
+#: .\posts\models.py:103
+msgid "Programming Area"
+msgstr "Сфера программирования"
+
+#: .\posts\models.py:106
+msgid "Global Area"
+msgstr "Глобальная сфера"
+
+#: .\posts\models.py:121
+msgid "Is Deleted"
+msgstr "Удалена"
+
+#: .\posts\models.py:135
+msgid "Sent"
+msgstr "Отправлен"
+
+#: .\posts\models.py:136
+msgid "Accepted"
+msgstr "Принят"
+
+#: .\posts\models.py:137
+msgid "Rejected"
+msgstr "Отклонен"
+
+#: .\posts\models.py:145 .\templates\posts\activity\manage\list.html:13
+#: .\templates\posts\activity\manage\list.html:29
+msgid "Status"
+msgstr "Статус"
+
+#: .\posts\models.py:168 .\templates\posts\main.html:141
+msgid "Unacceptable content"
+msgstr "Неприемлемый контент"
+
+#: .\posts\models.py:169 .\templates\posts\main.html:142
+msgid "Fraud"
+msgstr "Мошенничество"
+
+#: .\posts\models.py:170 .\templates\posts\main.html:143
+msgid "Language and activity does not match"
+msgstr "Язык и активность не совпадают"
+
+#: .\posts\models.py:194
+msgid "Is Checked"
+msgstr "Проверено"
+
+#: .\posts\utils.py:5
+msgid "Select language"
+msgstr "Выберите язык"
+
+#: .\posts\utils.py:6
+msgid "Afrikaans"
+msgstr ""
+
+#: .\posts\utils.py:7
+msgid "Arabic"
+msgstr ""
+
+#: .\posts\utils.py:8
+msgid "Algerian Arabic"
+msgstr ""
+
+#: .\posts\utils.py:9
+msgid "Asturian"
+msgstr ""
+
+#: .\posts\utils.py:10
+msgid "Azerbaijani"
+msgstr ""
+
+#: .\posts\utils.py:11
+msgid "Bulgarian"
+msgstr ""
+
+#: .\posts\utils.py:12
+msgid "Belarusian"
+msgstr ""
+
+#: .\posts\utils.py:13
+msgid "Bengali"
+msgstr ""
+
+#: .\posts\utils.py:14
+msgid "Breton"
+msgstr ""
+
+#: .\posts\utils.py:15
+msgid "Bosnian"
+msgstr ""
+
+#: .\posts\utils.py:16
+msgid "Catalan"
+msgstr ""
+
+#: .\posts\utils.py:17
+msgid "Central Kurdish (Sorani)"
+msgstr ""
+
+#: .\posts\utils.py:18
+msgid "Czech"
+msgstr ""
+
+#: .\posts\utils.py:19
+msgid "Welsh"
+msgstr ""
+
+#: .\posts\utils.py:20
+msgid "Danish"
+msgstr ""
+
+#: .\posts\utils.py:21
+msgid "German"
+msgstr ""
+
+#: .\posts\utils.py:22
+msgid "Lower Sorbian"
+msgstr ""
+
+#: .\posts\utils.py:23
+msgid "Greek"
+msgstr ""
+
+#: .\posts\utils.py:25
+msgid "Australian English"
+msgstr ""
+
+#: .\posts\utils.py:26
+msgid "British English"
+msgstr ""
+
+#: .\posts\utils.py:27
+msgid "Esperanto"
+msgstr ""
+
+#: .\posts\utils.py:28
+msgid "Spanish"
+msgstr ""
+
+#: .\posts\utils.py:29
+msgid "Argentinian Spanish"
+msgstr ""
+
+#: .\posts\utils.py:30
+msgid "Colombian Spanish"
+msgstr ""
+
+#: .\posts\utils.py:31
+msgid "Mexican Spanish"
+msgstr ""
+
+#: .\posts\utils.py:32
+msgid "Nicaraguan Spanish"
+msgstr ""
+
+#: .\posts\utils.py:33
+msgid "Venezuelan Spanish"
+msgstr ""
+
+#: .\posts\utils.py:34
+msgid "Estonian"
+msgstr ""
+
+#: .\posts\utils.py:35
+msgid "Basque"
+msgstr ""
+
+#: .\posts\utils.py:36
+msgid "Persian"
+msgstr ""
+
+#: .\posts\utils.py:37
+msgid "Finnish"
+msgstr ""
+
+#: .\posts\utils.py:38
+msgid "French"
+msgstr ""
+
+#: .\posts\utils.py:39
+msgid "Frisian"
+msgstr ""
+
+#: .\posts\utils.py:40
+msgid "Irish"
+msgstr ""
+
+#: .\posts\utils.py:41
+msgid "Scottish Gaelic"
+msgstr ""
+
+#: .\posts\utils.py:42
+msgid "Galician"
+msgstr ""
+
+#: .\posts\utils.py:43
+msgid "Hebrew"
+msgstr ""
+
+#: .\posts\utils.py:44
+msgid "Hindi"
+msgstr ""
+
+#: .\posts\utils.py:45
+msgid "Croatian"
+msgstr ""
+
+#: .\posts\utils.py:46
+msgid "Upper Sorbian"
+msgstr ""
+
+#: .\posts\utils.py:47
+msgid "Hungarian"
+msgstr ""
+
+#: .\posts\utils.py:48
+msgid "Armenian"
+msgstr ""
+
+#: .\posts\utils.py:49
+msgid "Interlingua"
+msgstr ""
+
+#: .\posts\utils.py:50
+msgid "Indonesian"
+msgstr ""
+
+#: .\posts\utils.py:51
+msgid "Igbo"
+msgstr ""
+
+#: .\posts\utils.py:52
+msgid "Ido"
+msgstr ""
+
+#: .\posts\utils.py:53
+msgid "Icelandic"
+msgstr ""
+
+#: .\posts\utils.py:54
+msgid "Italian"
+msgstr ""
+
+#: .\posts\utils.py:55
+msgid "Japanese"
+msgstr ""
+
+#: .\posts\utils.py:56
+msgid "Georgian"
+msgstr ""
+
+#: .\posts\utils.py:57
+msgid "Kabyle"
+msgstr ""
+
+#: .\posts\utils.py:58
+msgid "Kazakh"
+msgstr ""
+
+#: .\posts\utils.py:59
+msgid "Khmer"
+msgstr ""
+
+#: .\posts\utils.py:60
+msgid "Kannada"
+msgstr ""
+
+#: .\posts\utils.py:61
+msgid "Korean"
+msgstr ""
+
+#: .\posts\utils.py:62
+msgid "Kyrgyz"
+msgstr ""
+
+#: .\posts\utils.py:63
+msgid "Luxembourgish"
+msgstr ""
+
+#: .\posts\utils.py:64
+msgid "Lithuanian"
+msgstr ""
+
+#: .\posts\utils.py:65
+msgid "Latvian"
+msgstr ""
+
+#: .\posts\utils.py:66
+msgid "Macedonian"
+msgstr ""
+
+#: .\posts\utils.py:67
+msgid "Malayalam"
+msgstr ""
+
+#: .\posts\utils.py:68
+msgid "Mongolian"
+msgstr ""
+
+#: .\posts\utils.py:69
+msgid "Marathi"
+msgstr ""
+
+#: .\posts\utils.py:70
+msgid "Malay"
+msgstr ""
+
+#: .\posts\utils.py:71
+msgid "Burmese"
+msgstr ""
+
+#: .\posts\utils.py:72
+msgid "Norwegian Bokmål"
+msgstr ""
+
+#: .\posts\utils.py:73
+msgid "Nepali"
+msgstr ""
+
+#: .\posts\utils.py:74
+msgid "Dutch"
+msgstr ""
+
+#: .\posts\utils.py:75
+msgid "Norwegian Nynorsk"
+msgstr ""
+
+#: .\posts\utils.py:76
+msgid "Ossetic"
+msgstr ""
+
+#: .\posts\utils.py:77
+msgid "Punjabi"
+msgstr ""
+
+#: .\posts\utils.py:78
+msgid "Polish"
+msgstr ""
+
+#: .\posts\utils.py:79
+msgid "Portuguese"
+msgstr ""
+
+#: .\posts\utils.py:80
+msgid "Brazilian Portuguese"
+msgstr ""
+
+#: .\posts\utils.py:81
+msgid "Romanian"
+msgstr ""
+
+#: .\posts\utils.py:83
+msgid "Slovak"
+msgstr ""
+
+#: .\posts\utils.py:84
+msgid "Slovenian"
+msgstr ""
+
+#: .\posts\utils.py:85
+msgid "Albanian"
+msgstr ""
+
+#: .\posts\utils.py:86
+msgid "Serbian"
+msgstr ""
+
+#: .\posts\utils.py:87
+msgid "Serbian Latin"
+msgstr ""
+
+#: .\posts\utils.py:88
+msgid "Swedish"
+msgstr ""
+
+#: .\posts\utils.py:89
+msgid "Swahili"
+msgstr ""
+
+#: .\posts\utils.py:90
+msgid "Tamil"
+msgstr ""
+
+#: .\posts\utils.py:91
+msgid "Telugu"
+msgstr ""
+
+#: .\posts\utils.py:92
+msgid "Tajik"
+msgstr ""
+
+#: .\posts\utils.py:93
+msgid "Thai"
+msgstr ""
+
+#: .\posts\utils.py:94
+msgid "Turkmen"
+msgstr ""
+
+#: .\posts\utils.py:95
+msgid "Turkish"
+msgstr ""
+
+#: .\posts\utils.py:96
+msgid "Tatar"
+msgstr ""
+
+#: .\posts\utils.py:97
+msgid "Udmurt"
+msgstr ""
+
+#: .\posts\utils.py:98
+msgid "Ukrainian"
+msgstr ""
+
+#: .\posts\utils.py:99
+msgid "Urdu"
+msgstr ""
+
+#: .\posts\utils.py:100
+msgid "Uzbek"
+msgstr ""
+
+#: .\posts\utils.py:101
+msgid "Vietnamese"
+msgstr ""
+
+#: .\posts\utils.py:102
+msgid "Simplified Chinese"
+msgstr ""
+
+#: .\posts\utils.py:103
+msgid "Traditional Chinese"
+msgstr ""
+
+#: .\posts\views.py:201 .\templates\posts\activity\manage\list.html:17
+msgid "Up to you"
+msgstr "Вам решать"
+
+#: .\posts\views.py:204
+msgid "Not entered"
+msgstr "Не введен"
+
+#: .\templates\accounts\base.html:7 .\templates\base.html:6
+msgid "Page"
+msgstr "Страница"
+
+#: .\templates\accounts\login\main.html:3
+#: .\templates\accounts\password_reset\complete.html:9
+#: .\templates\accounts\password_reset\reset.html:33
+#: .\templates\accounts\register\main.html:29
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\templates\accounts\login\main.html:10
+msgid "Enter the platform"
+msgstr "Вход в платформу"
+
+#: .\templates\accounts\login\main.html:13
+msgid "Error: email or password wrong"
+msgstr "Ошибка: неверный адрес электронной почты или пароль"
+
+#: .\templates\accounts\login\main.html:23
+#: .\templates\accounts\register\main.html:24
+msgid "Submit"
+msgstr "Отправить"
+
+#: .\templates\accounts\login\main.html:28
+#: .\templates\accounts\settings\main.html:22
+msgid "Forgot your password? Get an email"
+msgstr "Забыли свой пароль? Получите электронное письмо"
+
+#: .\templates\accounts\login\main.html:33
+#: .\templates\accounts\password_reset\reset.html:28
+#: .\templates\accounts\register\main.html:3
+msgid "Register"
+msgstr "Регистрация"
+
+#: .\templates\accounts\password_reset\complete.html:3
+msgid "Password reset complete"
+msgstr "Сброс пароля завершен"
+
+#: .\templates\accounts\password_reset\complete.html:8
+msgid "Your password has been changed successfully. "
+msgstr "Ваш пароль был успешно изменен. "
+
+#: .\templates\accounts\password_reset\confirm.html:3
+#: .\templates\accounts\password_reset\confirm.html:10
+msgid "Password reset confirm"
+msgstr "Подтверждение сброса пароля"
+
+#: .\templates\accounts\password_reset\confirm.html:19
+#: .\templates\accounts\password_reset\done.html:8
+#: .\templates\accounts\password_reset\reset.html:10
+msgid "Reset Password"
+msgstr "Cброс Пароля"
+
+#: .\templates\accounts\password_reset\done.html:3
+msgid "Password reset done"
+msgstr "Сброс пароля выполнен"
+
+#: .\templates\accounts\password_reset\done.html:9
+msgid ""
+"Please check your inbox and follow the instruction to reset your password."
+msgstr ""
+"Пожалуйста проверьте свой почтовый ящик и следуйте инструкциям по сбросу "
+"пароля."
+
+#: .\templates\accounts\password_reset\email_message.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: .\templates\accounts\password_reset\email_message.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Пожалуйста перейдите на следующую страницу и выберите новый пароль:"
+
+#: .\templates\accounts\password_reset\email_message.html:8
+msgid "Your username, in case you’ve forgotten:"
+msgstr "Ваше имя пользователя, на случай, если вы забыли:"
+
+#: .\templates\accounts\password_reset\email_message.html:10
+msgid "Thanks for using our site!"
+msgstr "Спасибо, что воспользовались нашим сайтом!"
+
+#: .\templates\accounts\password_reset\reset.html:3
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: .\templates\accounts\password_reset\reset.html:23
+msgid "Send email"
+msgstr "Отправить электронное письмо"
+
+#: .\templates\accounts\register\activation_invalid.html:3
+msgid "Invalid Activation"
+msgstr "Активация не удалась"
+
+#: .\templates\accounts\register\activation_invalid.html:7
+msgid "Error"
+msgstr "Ошибка"
+
+#: .\templates\accounts\register\activation_invalid.html:8
+msgid "Invalid url for account activation"
+msgstr "Неверный url адрес для активации аккаунта"
+
+#: .\templates\accounts\register\activation_link.html:3
+msgid "Hello"
+msgstr "Привет"
+
+#: .\templates\accounts\register\activation_link.html:4
+msgid ""
+"Your account has successfully created. Please click below link to activate "
+"your account"
+msgstr ""
+"Ваш аккаунт был успешно создан. Пожалуйста нажмите ссылку ниже для активации "
+"аккаунта"
+
+#: .\templates\accounts\register\email_confirm.html:3
+msgid "Email Confirm"
+msgstr "Подтверждение почты"
+
+#: .\templates\accounts\register\email_confirm.html:7
+msgid "Account email sent"
+msgstr "Электронное письмо отправлено на ваш аккаунт"
+
+#: .\templates\accounts\register\email_confirm.html:8
+msgid "Check your email to activate your account"
+msgstr "Проверьте свою электронную почту, чтобы активировать учетную запись"
+
+#: .\templates\accounts\register\main.html:14
+msgid "Register in the platform"
+msgstr "Регистрация в платформе"
+
+#: .\templates\accounts\settings\main.html:3
+#: .\templates\accounts\settings\main.html:11
+msgid "Account settings"
+msgstr "Настройки аккаунта"
+
+#: .\templates\accounts\settings\main.html:20
+#: .\templates\posts\activity\owner\create.html:20
+#: .\templates\posts\activity\owner\detail.html:20
+msgid "SUBMIT"
+msgstr "СОХРАНИТЬ"
+
+#: .\templates\accounts\settings\main.html:21
+msgid "LOGOUT"
+msgstr "ВЫЙТИ"
+
+#: .\templates\accounts\view\detail.html:3
+#: .\templates\accounts\view\detail.html:11
+msgid "Account view"
+msgstr "Просмотр аккаунта"
+
+#: .\templates\base.html:60 .\templates\info\about.html:3
+msgid "About the project"
+msgstr "О проекте"
+
+#: .\templates\base.html:61 .\templates\info\sections.html:3
+msgid "Project sections"
+msgstr "Разделы проекта"
+
+#: .\templates\base.html:74
+msgid "Support the project"
+msgstr "Поддержать проект"
+
+#: .\templates\chat\main.html:3 .\templates\chat\readonly_thread.html:3
+#: .\templates\chat\thread.html:3
+msgid "Communication"
+msgstr "Общение"
+
+#: .\templates\chat\main.html:25
+msgid "Main Page"
+msgstr "Главная страница"
+
+#: .\templates\chat\main.html:29
+msgid "Choose the thread"
+msgstr "Выберите чат"
+
+#: .\templates\chat\readonly_thread.html:40 .\templates\chat\thread.html:48
+msgid "accepted to"
+msgstr "принят(а)"
+
+#: .\templates\chat\readonly_thread.html:41 .\templates\chat\thread.html:49
+msgid "activity"
+msgstr "активность"
+
+#: .\templates\chat\readonly_thread.html:61
+msgid "Switched to readonly mode"
+msgstr "Чат в режиме только для чтения"
+
+#: .\templates\chat\thread.html:11
+msgid "New message was received from another thread, please reload the page"
+msgstr ""
+"Получено новое сообщение из другого чата, пожалуйста перезагрузите страницу"
+
+#: .\templates\chat\thread.html:85
+msgid "You were disconnected from thread, please reload the page"
+msgstr "Вы были отключены от чата, пожалуйста перезагрузите страницу"
+
+#: .\templates\chat\thread.html:91
+msgid "Thread status"
+msgstr "Статус чата"
+
+#: .\templates\chat\thread.html:94
+msgid "readonly mode without recovery"
+msgstr "режим только для чтения без восстановления"
+
+#: .\templates\chat\thread.html:98 .\templates\posts\main.html:127
+#: .\templates\posts\main.html:149
+msgid "Cancel"
+msgstr "Отменить"
+
+#: .\templates\chat\thread.html:99 .\templates\posts\main.html:128
+#: .\templates\posts\main.html:150
+msgid "Сonfirm"
+msgstr "Подтвердить"
+
+#: .\templates\info\about.html:8
+msgid ""
+"Free project that was created for a simple union of programmers by ideas."
+msgstr ""
+"Бесплатный проект созданый для простого и бесплатного объединения "
+"программистов по целям."
+
+#: .\templates\info\about.html:11
+msgid ""
+"1. A programmer who has a certain idea creates an activity by describing the "
+"task and the required skills."
+msgstr ""
+"1. Программист у которого есть определенная идея создает активность описав "
+"задачу и требуемые навыки."
+
+#: .\templates\info\about.html:14
+msgid ""
+"2. A programmer who would like to work on the activity which he/she is "
+"interested in replies to it."
+msgstr ""
+"2. Программист который хотел бы поработать над интересующей его активностью "
+"откликается."
+
+#: .\templates\info\about.html:17
+msgid ""
+"3. If the creator of the activity accepts the reply, the dialog will be "
+"moved from the replies section to the communication section."
+msgstr ""
+"3. Если создатель активности примет отклик, диалог будет перенесен из "
+"раздела откликов в раздел для общения."
+
+#: .\templates\info\sections.html:8
+msgid ""
+"After registration, you will be redirected to the main page of the project. "
+"On the main page, you can search for suitable activities by filters or "
+"recommendations."
+msgstr ""
+"После регистрации вы будете перенаправлены на главную страницу проекта. На "
+"главной странице можно искать подходящие активности по фильтрам или "
+"рекомендациям."
+
+#: .\templates\info\sections.html:11
+msgid ""
+"The project sections are located on the right side of the navigation bar:"
+msgstr "Разделы проекта находятся в правой части панели навигации:"
+
+#: .\templates\info\sections.html:14
+msgid ""
+"1. Your activities. The section for managing your activities, do not forget "
+"to delete the activity after you have found a companion."
+msgstr ""
+"1. Ваши активности. Раздел для управления вашими активностями, создав "
+"активность не забудьте ее удалить когда вы уже нашли напарника."
+
+#: .\templates\info\sections.html:17
+msgid ""
+"2. Manage replies. A section for viewing the replies made by you, as well as "
+"managing the replies that are made to you."
+msgstr ""
+"2. Управление откликами. Раздел для просмотра откликов сделанных вами, а "
+"также управления откликами которые сделаны вам."
+
+#: .\templates\info\sections.html:20
+msgid "3. Communication. Discussion of the implementation of the activity."
+msgstr "3. Общение. Обсуждение реализации активности."
+
+#: .\templates\info\sections.html:23
+msgid "4. Account settings."
+msgstr "4. Настройки аккаунта."
+
+#: .\templates\posts\activity\manage\list.html:3
+#: .\templates\posts\activity\manage\list.html:10
+msgid "Manage replies"
+msgstr "Управление откликами"
+
+#: .\templates\posts\activity\manage\list.html:21
+msgid "Apply"
+msgstr "Применить"
+
+#: .\templates\posts\activity\manage\list.html:33
+msgid "Created by"
+msgstr "Создано"
+
+#: .\templates\posts\activity\manage\list.html:37
+msgid "To Activity"
+msgstr "На Активность"
+
+#: .\templates\posts\activity\manage\list.html:39
+#: .\templates\posts\main.html:122
+msgid "Comment"
+msgstr "Комментарий"
+
+#: .\templates\posts\activity\manage\list.html:50
+msgid "Accept"
+msgstr "Принять"
+
+#: .\templates\posts\activity\manage\list.html:57
+msgid "Reject"
+msgstr "Отказать"
+
+#: .\templates\posts\activity\manage\list.html:64
+#: .\templates\posts\main.html:75
+msgid "Nothing found"
+msgstr "Ничего не найдено"
+
+#: .\templates\posts\activity\owner\create.html:3
+msgid "Create activity"
+msgstr "Создать активность"
+
+#: .\templates\posts\activity\owner\create.html:11
+msgid "Create Activity"
+msgstr "Создать Активность"
+
+#: .\templates\posts\activity\owner\detail.html:3
+#: .\templates\posts\activity\owner\detail.html:11
+#: .\templates\posts\activity\view\deleted.html:3
+#: .\templates\posts\activity\view\detail.html:3
+#: .\templates\posts\activity\view\detail.html:11
+msgid "Activity details"
+msgstr "Просмотр активности"
+
+#: .\templates\posts\activity\owner\detail.html:24
+msgid "DELETE"
+msgstr "УДАЛИТЬ"
+
+#: .\templates\posts\activity\owner\list.html:3
+msgid "Your activities list"
+msgstr "Список ваших активностей"
+
+#: .\templates\posts\activity\owner\list.html:7
+msgid "Your activities:"
+msgstr "Ваши активности"
+
+#: .\templates\posts\activity\owner\list.html:11
+msgid "New Activity"
+msgstr "Новая активность"
+
+#: .\templates\posts\activity\owner\list.html:21
+msgid "You don't have any activities"
+msgstr "У вас нет активностей"
+
+#: .\templates\posts\activity\view\deleted.html:7
+msgid "Activity was deleted"
+msgstr "Активность была удалена"
+
+#: .\templates\posts\main.html:4
+msgid "Main"
+msgstr "Главная"
+
+#: .\templates\posts\main.html:15
+msgid "Filter"
+msgstr "Фильтр"
+
+#: .\templates\posts\main.html:16
+msgid "Recommendations"
+msgstr "Рекомендации"
+
+#: .\templates\posts\main.html:22
+msgid "Apply Filter"
+msgstr "Применить фильтр"
+
+#: .\templates\posts\main.html:59
+msgid "Created by: "
+msgstr "Создана: "
+
+#: .\templates\posts\main.html:64
+msgid "More"
+msgstr "Больше"
+
+#: .\templates\posts\main.html:65
+msgid "Reply"
+msgstr "Откликнуться"
+
+#: .\templates\posts\main.html:124
+msgid "Up to 512 characters"
+msgstr "До 512 символов"
+
+#: .\templates\posts\main.html:138
+msgid "Reason"
+msgstr "Причина"
+
+#: .\templates\posts\main.html:140
+msgid "Select reason"
+msgstr "Выберите причину"
+
+#: .\templates\posts\main.html:146
+msgid "Up to 255 characters"
+msgstr "До 255 символов"

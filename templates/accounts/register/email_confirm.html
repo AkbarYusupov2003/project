@@ -1,0 +1,11 @@
+{% extends "accounts/base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Email Confirm' %}{% endblock %}
+{% block content %}
+  <div class="container">
+    <div>
+      <h3 class="mb-4">{% trans 'Account email sent' %}</h3>
+      <p>{% trans 'Check your email to activate your account' %}</p>
+    </div>
+  </div>
+{% endblock %}

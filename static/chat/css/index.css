@@ -1,0 +1,70 @@
+#chat-row {
+  border: 2px solid #DCDCDC;
+}
+
+#users-container {
+  position: relative;
+  min-height: 500px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 2px solid #DCDCDC;
+  height: calc(100vh - 210px);
+  overflow-y: scroll;
+}
+
+.new-message {
+  color: #d42114;font-weight: 700;
+}
+
+#messages-body {
+  width: 100%;
+  min-height: 400px;
+  height: calc(100vh - 320px);
+  overflow-y: scroll;
+}
+
+#selected-user {
+  border-radius: 0px 15px 0px 0px;
+  border-bottom: 2px solid #DCDCDC;
+}
+
+#buddy-username {
+  background-color: #CCE5FF;
+  border-radius: 15px 0px 0px 0px;
+}
+
+.own-message {
+  background-color: #66FD5B;
+  float: left;
+  padding: 8px 15px;
+  margin: 0 20px 10px 0;
+  clear: both;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+.buddy-message {
+  background-color: white;
+  float: left;
+  padding: 8px 15px;
+  margin: 0 20px 10px 0;
+  clear: both;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+#from_another_thread {
+  display: none;
+}
+
+#disconnected {
+  display:none;
+}
+
+#readonly {
+  clear: both;
+}

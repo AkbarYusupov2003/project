@@ -1,0 +1,40 @@
+{% extends "accounts/base.html" %}
+{% load static i18n %}
+{% block title %}{% trans 'Password reset' %}{% endblock %}
+{% block content%}
+  <div id="custom-container" class="container">
+    <div id="custom-flex" class="d-flex align-items-center pb-5">
+      <div class="col-12 col-md-12 col-lg-12 pb-5 mx-auto">
+        <form class="body-form" method="post">
+          {% csrf_token %}
+          <h3 class="mb-4 fw-bold">{% trans 'Reset Password' %}</h3>
+          {% if form.errors %}
+            <div class="alert alert-primary" role="alert">
+              {{ form.errors }}
+            </div>
+          {% endif %}
+          <div class="form-group">
+            <label>{% trans 'Email' %}</label>
+            <input type="email" maxlength="254" class="form-control" name="email" placeholder="{% trans 'Enter the email' %}" autocomplete="email">
+          </div>
+          <div class="d-grid gap-2">
+            <input type="hidden" name="next" value="{{ next }}">
+            <button class="btn btn-primary py-2 mb-4 mt-5 fw-bold" type="submit">
+              {% trans 'Send email' %}
+            </button>
+          </div>
+          <div class="flex-column justify-content-center mx-auto pb-3">
+            <div class="text-center">
+              <a href="{% url 'accounts:register' %}" class="h5">{% trans 'Register' %}</a>
+            </div>
+          </div>
+          <div class="flex-column justify-content-center mx-auto pb-3">
+            <div class="text-center">
+              <a href="{% url 'accounts:login' %}" class="h5">{% trans 'Login' %}</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

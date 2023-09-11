@@ -1,0 +1,26 @@
+{% extends "accounts/base.html" %}
+{% load static i18n %}
+{% block title %}{% trans 'Password reset confirm' %}{% endblock %}
+{% block content %}
+  <div id="custom-container" class="container">
+    <div id="custom-flex" class="d-flex align-items-center pb-5">
+      <div class="col-12 col-md-12 col-lg-12 pb-5 mx-auto">
+        <form class="body-form" method="post">
+          {% csrf_token %}
+          <h2>{% trans 'Password reset confirm' %}</h2>
+          {% if form.errors %}
+            <div class="alert alert-primary" role="alert">
+              {{ form.errors }}
+            </div>
+          {% endif %}
+          {{ form.as_p }}
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary py-2 mb-4 mt-5 fw-bold" type="submit">
+              {% trans 'Reset Password' %}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

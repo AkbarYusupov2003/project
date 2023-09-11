@@ -1,0 +1,1724 @@
+[
+{
+  "model": "posts.globalarea",
+  "pk": 1,
+  "fields": {
+    "parent": null,
+    "name": "Exact sciences",
+    "name_en": "Exact sciences",
+    "name_ru": "Точные науки",
+    "lft": 1,
+    "rght": 10,
+    "tree_id": 17,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 2,
+  "fields": {
+    "parent": null,
+    "name": "Industrial",
+    "name_en": "Industrial",
+    "name_ru": "Промышленность",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 14,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 3,
+  "fields": {
+    "parent": null,
+    "name": "Commerce",
+    "name_en": "Commerce",
+    "name_ru": "Коммерция",
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 16,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 4,
+  "fields": {
+    "parent": 3,
+    "name": "Business to business",
+    "name_en": "Business to business",
+    "name_ru": "Бизнес для бизнеса",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 5,
+  "fields": {
+    "parent": null,
+    "name": "Real estate",
+    "name_en": "Real estate",
+    "name_ru": "Недвижимость",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 11,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 6,
+  "fields": {
+    "parent": null,
+    "name": "Art",
+    "name_en": "Art",
+    "name_ru": "Творчество",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 15,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 7,
+  "fields": {
+    "parent": null,
+    "name": "Economics",
+    "name_en": "Economics",
+    "name_ru": "Экономика",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 18,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 8,
+  "fields": {
+    "parent": null,
+    "name": "Medicine",
+    "name_en": "Medicine",
+    "name_ru": "Медицина",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 10,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 9,
+  "fields": {
+    "parent": null,
+    "name": "Social work",
+    "name_en": "Social work",
+    "name_ru": "Общественная деятельность",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 12,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 10,
+  "fields": {
+    "parent": 3,
+    "name": "Business to government",
+    "name_en": "Business to government",
+    "name_ru": "Бизнес для государства",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 11,
+  "fields": {
+    "parent": null,
+    "name": "Marketing",
+    "name_en": "Marketing",
+    "name_ru": "Маркетинг",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 9,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 12,
+  "fields": {
+    "parent": null,
+    "name": "Education",
+    "name_en": "Education",
+    "name_ru": "Образование",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 13,
+  "fields": {
+    "parent": null,
+    "name": "Electronics",
+    "name_en": "Electronics",
+    "name_ru": "Электроника",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 3,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 14,
+  "fields": {
+    "parent": null,
+    "name": "Sport",
+    "name_en": "Sport",
+    "name_ru": "Спорт",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 5,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 15,
+  "fields": {
+    "parent": null,
+    "name": "Agricultural and animal husbandry",
+    "name_en": "Agricultural and animal husbandry",
+    "name_ru": "Аграрная и животноводческая",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 1,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 16,
+  "fields": {
+    "parent": null,
+    "name": "Travelling",
+    "name_en": "Travelling",
+    "name_ru": "Путешествия",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 6,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 17,
+  "fields": {
+    "parent": null,
+    "name": "Logistics",
+    "name_en": "Logistics",
+    "name_ru": "Логистика",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 4,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 18,
+  "fields": {
+    "parent": null,
+    "name": "Other",
+    "name_en": "Other",
+    "name_ru": "Другая",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 8,
+    "level": 0
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 19,
+  "fields": {
+    "parent": 1,
+    "name": "Mathematics",
+    "name_en": "Mathematics",
+    "name_ru": "Математика",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 17,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 20,
+  "fields": {
+    "parent": 1,
+    "name": "Physics",
+    "name_en": "Physics",
+    "name_ru": "Физика",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 17,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 21,
+  "fields": {
+    "parent": 1,
+    "name": "Chemistry",
+    "name_en": "Chemistry",
+    "name_ru": "Химия",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 17,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 22,
+  "fields": {
+    "parent": 1,
+    "name": "Informatics",
+    "name_en": "Informatics",
+    "name_ru": "Информатика",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 17,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 23,
+  "fields": {
+    "parent": 3,
+    "name": "Business to consumer",
+    "name_en": "Business to consumer",
+    "name_ru": "Бизнес для потребителя",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 24,
+  "fields": {
+    "parent": 3,
+    "name": "Consumer to consumer",
+    "name_en": "Consumer to consumer",
+    "name_ru": "Потребитель для потребителя",
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.globalarea",
+  "pk": 25,
+  "fields": {
+    "parent": 3,
+    "name": "Consumer to business",
+    "name_en": "Consumer to business",
+    "name_ru": "Потребитель для бизнеса",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 1,
+  "fields": {
+    "parent": null,
+    "name": "Web",
+    "name_en": "Web",
+    "name_ru": "Веб",
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 9,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 2,
+  "fields": {
+    "parent": null,
+    "name": "Software engineering",
+    "name_en": "Software engineering",
+    "name_ru": "Программная инженерия",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 12,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 3,
+  "fields": {
+    "parent": null,
+    "name": "Games development",
+    "name_en": "Games development",
+    "name_ru": "Разработка игр",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 14,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 4,
+  "fields": {
+    "parent": null,
+    "name": "Apps development",
+    "name_en": "Apps development",
+    "name_ru": "Разработка приложений",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 1,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 5,
+  "fields": {
+    "parent": null,
+    "name": "Information security",
+    "name_en": "Information security",
+    "name_ru": "Информационная безопасность",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 10,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 6,
+  "fields": {
+    "parent": null,
+    "name": "Artificial intelligence",
+    "name_en": "Artificial intelligence",
+    "name_ru": "Искусственный интеллект",
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 11,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 7,
+  "fields": {
+    "parent": null,
+    "name": "Data Science",
+    "name_en": "Data Science",
+    "name_ru": "Data Science",
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 4,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 8,
+  "fields": {
+    "parent": null,
+    "name": "Database development",
+    "name_en": "Database development",
+    "name_ru": "Разработка баз данных",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 13,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 9,
+  "fields": {
+    "parent": null,
+    "name": "Blockchain",
+    "name_en": "Blockchain",
+    "name_ru": "Блокчейн",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 10,
+  "fields": {
+    "parent": null,
+    "name": "Cryptography",
+    "name_en": "Cryptography",
+    "name_ru": "Криптография",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 3,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 11,
+  "fields": {
+    "parent": null,
+    "name": "Embedded development",
+    "name_en": "Embedded development",
+    "name_ru": "Embedded разработка",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 5,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 12,
+  "fields": {
+    "parent": null,
+    "name": "Internet of Things",
+    "name_en": "Internet of Things",
+    "name_ru": "Интернет вещей",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 6,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 13,
+  "fields": {
+    "parent": null,
+    "name": "Other",
+    "name_en": "Other",
+    "name_ru": "Другая",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 8,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 14,
+  "fields": {
+    "parent": 1,
+    "name": "Frontend",
+    "name_en": "Frontend",
+    "name_ru": "Фронтенд",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 9,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 15,
+  "fields": {
+    "parent": 1,
+    "name": "Backend",
+    "name_en": "Backend",
+    "name_ru": "Бэкэнд",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 9,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 16,
+  "fields": {
+    "parent": 6,
+    "name": "Machine learning",
+    "name_en": "Machine learning",
+    "name_ru": "Машинное обучение",
+    "lft": 2,
+    "rght": 5,
+    "tree_id": 11,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 17,
+  "fields": {
+    "parent": 16,
+    "name": "Deep learning",
+    "name_en": "Deep learning",
+    "name_ru": "Глубокое обучение",
+    "lft": 3,
+    "rght": 4,
+    "tree_id": 11,
+    "level": 2
+  }
+},
+{
+  "model": "posts.programmingarea",
+  "pk": 18,
+  "fields": {
+    "parent": 7,
+    "name": "Big Data",
+    "name_en": "Big Data",
+    "name_ru": "Big Data",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 1,
+  "fields": {
+    "parent": null,
+    "name": "Assembler",
+    "name_en": "Assembler",
+    "name_ru": "Ассемблер",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 35,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 2,
+  "fields": {
+    "parent": null,
+    "name": "C",
+    "name_en": "C",
+    "name_ru": "C",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 3,
+  "fields": {
+    "parent": null,
+    "name": "C#",
+    "name_en": "C#",
+    "name_ru": "C#",
+    "lft": 1,
+    "rght": 10,
+    "tree_id": 3,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 4,
+  "fields": {
+    "parent": 3,
+    "name": "ASP.NET",
+    "name_en": "ASP.NET",
+    "name_ru": "ASP.NET",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 5,
+  "fields": {
+    "parent": 3,
+    "name": "WPF",
+    "name_en": "WPF",
+    "name_ru": "WPF",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 6,
+  "fields": {
+    "parent": 3,
+    "name": "ADO.NET",
+    "name_en": "ADO.NET",
+    "name_ru": "ADO.NET",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 7,
+  "fields": {
+    "parent": 3,
+    "name": "Unity",
+    "name_en": "Unity",
+    "name_ru": "Unity",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 8,
+  "fields": {
+    "parent": null,
+    "name": "C++",
+    "name_en": "C++",
+    "name_ru": "C++",
+    "lft": 1,
+    "rght": 8,
+    "tree_id": 4,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 9,
+  "fields": {
+    "parent": 8,
+    "name": "Unreal Engine",
+    "name_en": "Unreal Engine",
+    "name_ru": "Unreal Engine",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 10,
+  "fields": {
+    "parent": 8,
+    "name": "Qt",
+    "name_en": "Qt",
+    "name_ru": "Qt",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 11,
+  "fields": {
+    "parent": 8,
+    "name": "Drogon",
+    "name_en": "Drogon",
+    "name_ru": "Drogon",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 4,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 12,
+  "fields": {
+    "parent": null,
+    "name": "Clojure",
+    "name_en": "Clojure",
+    "name_ru": "Clojure",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 5,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 13,
+  "fields": {
+    "parent": null,
+    "name": "Dart",
+    "name_en": "Dart",
+    "name_ru": "Dart",
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 6,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 14,
+  "fields": {
+    "parent": 13,
+    "name": "Flutter",
+    "name_en": "Flutter",
+    "name_ru": "Flutter",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 6,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 15,
+  "fields": {
+    "parent": null,
+    "name": "Elixir",
+    "name_en": "Elixir",
+    "name_ru": "Elixir",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 9,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 16,
+  "fields": {
+    "parent": null,
+    "name": "Erlang",
+    "name_en": "Erlang",
+    "name_ru": "Erlang",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 10,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 17,
+  "fields": {
+    "parent": null,
+    "name": "F#",
+    "name_en": "F#",
+    "name_ru": "F#",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 11,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 18,
+  "fields": {
+    "parent": null,
+    "name": "Go",
+    "name_en": "Go",
+    "name_ru": "Go",
+    "lft": 1,
+    "rght": 8,
+    "tree_id": 13,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 19,
+  "fields": {
+    "parent": 18,
+    "name": "Gin",
+    "name_en": "Gin",
+    "name_ru": "Gin",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 13,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 20,
+  "fields": {
+    "parent": 18,
+    "name": "Fiber",
+    "name_en": "Fiber",
+    "name_ru": "Fiber",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 13,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 21,
+  "fields": {
+    "parent": 18,
+    "name": "Gorilla",
+    "name_en": "Gorilla",
+    "name_ru": "Gorilla",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 13,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 22,
+  "fields": {
+    "parent": null,
+    "name": "Haskell",
+    "name_en": "Haskell",
+    "name_ru": "Haskell",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 14,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 23,
+  "fields": {
+    "parent": null,
+    "name": "Java",
+    "name_en": "Java",
+    "name_ru": "Java",
+    "lft": 1,
+    "rght": 10,
+    "tree_id": 15,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 24,
+  "fields": {
+    "parent": 23,
+    "name": "Spring Framework",
+    "name_en": "Spring Framework",
+    "name_ru": "Spring Framework",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 25,
+  "fields": {
+    "parent": 23,
+    "name": "Spark",
+    "name_en": "Spark",
+    "name_ru": "Spark",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 26,
+  "fields": {
+    "parent": 23,
+    "name": "Hibernate",
+    "name_en": "Hibernate",
+    "name_ru": "Hibernate",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 27,
+  "fields": {
+    "parent": 23,
+    "name": "JavaFX",
+    "name_en": "JavaFX",
+    "name_ru": "JavaFX",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 15,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 28,
+  "fields": {
+    "parent": null,
+    "name": "JavaScript",
+    "name_en": "JavaScript",
+    "name_ru": "JavaScript",
+    "lft": 1,
+    "rght": 12,
+    "tree_id": 16,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 29,
+  "fields": {
+    "parent": 28,
+    "name": "React",
+    "name_en": "React",
+    "name_ru": "React",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 30,
+  "fields": {
+    "parent": 28,
+    "name": "Angular",
+    "name_en": "Angular",
+    "name_ru": "Angular",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 31,
+  "fields": {
+    "parent": 28,
+    "name": "Vue.js",
+    "name_en": "Vue.js",
+    "name_ru": "Vue.js",
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 32,
+  "fields": {
+    "parent": 28,
+    "name": "Node.js",
+    "name_en": "Node.js",
+    "name_ru": "Node.js",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 33,
+  "fields": {
+    "parent": 28,
+    "name": "Svelte",
+    "name_en": "Svelte",
+    "name_ru": "Svelte",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 16,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 34,
+  "fields": {
+    "parent": null,
+    "name": "Julia",
+    "name_en": "Julia",
+    "name_ru": "Julia",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 17,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 35,
+  "fields": {
+    "parent": null,
+    "name": "Kotlin",
+    "name_en": "Kotlin",
+    "name_ru": "Kotlin",
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 18,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 36,
+  "fields": {
+    "parent": 35,
+    "name": "Ktor",
+    "name_en": "Ktor",
+    "name_ru": "Ktor",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 18,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 37,
+  "fields": {
+    "parent": null,
+    "name": "Lisp",
+    "name_en": "Lisp",
+    "name_ru": "Lisp",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 19,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 38,
+  "fields": {
+    "parent": null,
+    "name": "Lua",
+    "name_en": "Lua",
+    "name_ru": "Lua",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 20,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 39,
+  "fields": {
+    "parent": null,
+    "name": "MATLAB",
+    "name_en": "MATLAB",
+    "name_ru": "MATLAB",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 21,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 40,
+  "fields": {
+    "parent": null,
+    "name": "Objective-C",
+    "name_en": "Objective-C",
+    "name_ru": "Objective-C",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 23,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 41,
+  "fields": {
+    "parent": null,
+    "name": "Perl",
+    "name_en": "Perl",
+    "name_ru": "Perl",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 26,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 42,
+  "fields": {
+    "parent": null,
+    "name": "PHP",
+    "name_en": "PHP",
+    "name_ru": "PHP",
+    "lft": 1,
+    "rght": 10,
+    "tree_id": 25,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 43,
+  "fields": {
+    "parent": 42,
+    "name": "Laravel",
+    "name_en": "Laravel",
+    "name_ru": "Laravel",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 44,
+  "fields": {
+    "parent": 42,
+    "name": "Symfony",
+    "name_en": "Symfony",
+    "name_ru": "Symfony",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 45,
+  "fields": {
+    "parent": 42,
+    "name": "Yii",
+    "name_en": "Yii",
+    "name_ru": "Yii",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 46,
+  "fields": {
+    "parent": 42,
+    "name": "CodeIgniter",
+    "name_en": "CodeIgniter",
+    "name_ru": "CodeIgniter",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 25,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 47,
+  "fields": {
+    "parent": null,
+    "name": "Python",
+    "name_en": "Python",
+    "name_ru": "Python",
+    "lft": 1,
+    "rght": 14,
+    "tree_id": 27,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 48,
+  "fields": {
+    "parent": 47,
+    "name": "Django",
+    "name_en": "Django",
+    "name_ru": "Django",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 49,
+  "fields": {
+    "parent": 47,
+    "name": "Flask",
+    "name_en": "Flask",
+    "name_ru": "Flask",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 50,
+  "fields": {
+    "parent": 47,
+    "name": "FastAPI",
+    "name_en": "FastAPI",
+    "name_ru": "FastAPI",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 51,
+  "fields": {
+    "parent": 47,
+    "name": "TensorFlow",
+    "name_en": "TensorFlow",
+    "name_ru": "TensorFlow",
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 52,
+  "fields": {
+    "parent": 47,
+    "name": "Keras",
+    "name_en": "Keras",
+    "name_ru": "Keras",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 53,
+  "fields": {
+    "parent": 47,
+    "name": "PyTorch",
+    "name_en": "PyTorch",
+    "name_ru": "PyTorch",
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 27,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 54,
+  "fields": {
+    "parent": null,
+    "name": "R",
+    "name_en": "R",
+    "name_ru": "R",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 28,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 55,
+  "fields": {
+    "parent": null,
+    "name": "Ruby",
+    "name_en": "Ruby",
+    "name_ru": "Ruby",
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 29,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 56,
+  "fields": {
+    "parent": 55,
+    "name": "Ruby on Rails",
+    "name_en": "Ruby on Rails",
+    "name_ru": "Ruby on Rails",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 29,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 57,
+  "fields": {
+    "parent": null,
+    "name": "Rust",
+    "name_en": "Rust",
+    "name_ru": "Rust",
+    "lft": 1,
+    "rght": 10,
+    "tree_id": 30,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 58,
+  "fields": {
+    "parent": 57,
+    "name": "Tauri",
+    "name_en": "Tauri",
+    "name_ru": "Tauri",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 30,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 59,
+  "fields": {
+    "parent": 57,
+    "name": "Yew",
+    "name_en": "Yew",
+    "name_ru": "Yew",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 30,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 60,
+  "fields": {
+    "parent": 57,
+    "name": "Rocket",
+    "name_en": "Rocket",
+    "name_ru": "Rocket",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 30,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 61,
+  "fields": {
+    "parent": 57,
+    "name": "Actix",
+    "name_en": "Actix",
+    "name_ru": "Actix",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 30,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 62,
+  "fields": {
+    "parent": null,
+    "name": "Scala",
+    "name_en": "Scala",
+    "name_ru": "Scala",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 31,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 63,
+  "fields": {
+    "parent": null,
+    "name": "Shell",
+    "name_en": "Shell",
+    "name_ru": "Shell",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 32,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 64,
+  "fields": {
+    "parent": null,
+    "name": "Swift",
+    "name_en": "Swift",
+    "name_ru": "Swift",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 33,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 65,
+  "fields": {
+    "parent": null,
+    "name": "TypeScript",
+    "name_en": "TypeScript",
+    "name_ru": "TypeScript",
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 34,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 66,
+  "fields": {
+    "parent": 65,
+    "name": "NestJs",
+    "name_en": "NestJs",
+    "name_ru": "NestJs",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 34,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 67,
+  "fields": {
+    "parent": null,
+    "name": "Databases",
+    "name_en": "Databases",
+    "name_ru": "Базы данных",
+    "lft": 1,
+    "rght": 16,
+    "tree_id": 7,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 68,
+  "fields": {
+    "parent": 67,
+    "name": "Oracle",
+    "name_en": "Oracle",
+    "name_ru": "Oracle",
+    "lft": 10,
+    "rght": 11,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 69,
+  "fields": {
+    "parent": 67,
+    "name": "Microsoft SQL Server",
+    "name_en": "Microsoft SQL Server",
+    "name_ru": "Microsoft SQL Server",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 70,
+  "fields": {
+    "parent": 67,
+    "name": "PostgreSQL",
+    "name_en": "PostgreSQL",
+    "name_ru": "PostgreSQL",
+    "lft": 12,
+    "rght": 13,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 71,
+  "fields": {
+    "parent": 67,
+    "name": "MySQL",
+    "name_en": "MySQL",
+    "name_ru": "MySQL",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 72,
+  "fields": {
+    "parent": 67,
+    "name": "Redis",
+    "name_en": "Redis",
+    "name_ru": "Redis",
+    "lft": 14,
+    "rght": 15,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 73,
+  "fields": {
+    "parent": 67,
+    "name": "MongoDB",
+    "name_en": "MongoDB",
+    "name_ru": "MongoDB",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 74,
+  "fields": {
+    "parent": 67,
+    "name": "Cassandra",
+    "name_en": "Cassandra",
+    "name_ru": "Cassandra",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 7,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 75,
+  "fields": {
+    "parent": null,
+    "name": "Docker",
+    "name_en": "Docker",
+    "name_ru": "Docker",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 8,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 76,
+  "fields": {
+    "parent": null,
+    "name": "Git",
+    "name_en": "Git",
+    "name_ru": "Git",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 12,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 77,
+  "fields": {
+    "parent": null,
+    "name": "Message brokers",
+    "name_en": "Message brokers",
+    "name_ru": "Брокеры сообщений",
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 22,
+    "level": 0
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 78,
+  "fields": {
+    "parent": 77,
+    "name": "RabbitMQ",
+    "name_en": "RabbitMQ",
+    "name_ru": "RabbitMQ",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 22,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 79,
+  "fields": {
+    "parent": 77,
+    "name": "Kafka",
+    "name_en": "Kafka",
+    "name_ru": "Kafka",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 22,
+    "level": 1
+  }
+},
+{
+  "model": "posts.programmingskill",
+  "pk": 80,
+  "fields": {
+    "parent": null,
+    "name": "Other",
+    "name_en": "Other",
+    "name_ru": "Другой",
+    "lft": 1,
+    "rght": 2,
+    "tree_id": 24,
+    "level": 0
+  }
+}
+]

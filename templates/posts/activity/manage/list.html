@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans 'Manage replies' %}{% endblock %}
+{% block head %}
+  <script src="{% static 'posts/js/manage_list.js' %}"></script>
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="row body-form">
+      <h2 class="text-center mb-3">{% trans 'Manage replies' %}</h2>
+      <form method="get">
+        <div class="row mb-4 pe-0">
+          <label class="ps-0">{% trans 'Status' %}</label>
+          <div class="col-md-10 col-9 ps-0">
+            <select class="form-select" name="status">
+              <option value="any" selected>{% trans 'Any' %}</option>
+              <option value="up_to_you" {% if request.GET.status == "up_to_you" %} selected {% endif %}>{% trans 'Up to you' %}</option>
+            </select>
+          </div>
+          <div class="col-md-2 col-3 p-0">
+            <button id="manage-filter-apply" class="btn btn-primary">{% trans 'Apply' %}</button>
+          </div>
+        </div>
+      </form>
+      {% for manage in object_list %}
+        <div id="{{ manage.pk }}" class="manage-card card mb-5">
+          <div class="row">
+            <div class="col-6">
+              <label class="mt-2">{% trans 'Status' %}</label>
+              <input class="form-control" value="{{ manage.get_status_display }}" disabled>
+            </div>
+            <div class="col-6 form-group">
+              <label class="mt-2">{% trans 'Created by' %}</label>
+              <a href="{% url 'accounts:account-detail' manage.owner.pk %}" class="form-control text-primary">{{ manage.owner }}</a>
+            </div>
+          </div>
+          <label class="mt-2">{% trans 'To Activity' %}</label>
+          <a href="{% url 'posts:activity-detail' manage.activity.pk %}" class="form-control text-primary">{{ manage.activity.title }}</a>
+          <label class="mt-2">{% trans 'Comment' %}</label>
+          <div class="bg-white form-control">
+            <span>{{ manage.comment }}</span>
+          </div>
+          <p class="mb-1 text-secondary text-end">{{ manage.updated_at }}</p>
+          {% if manage.decide %}
+            <div class="row mb-2">
+              <div class="col-6 d-flex justify-content-center">
+                <button class="btn btn-outline-success accept" onclick="accept(this)" data-pk="{{ manage.pk }}" data-comment="{{ manage.comment }}">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>-->
+                  </svg><br><span>{% trans 'Accept' %}</span>
+                </button>
+              </div>
+              <div class="col-6 d-flex justify-content-center">
+                <button class="btn btn-outline-danger" onclick="reject(this)" data-pk="{{ manage.pk }}">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>-->
+                  </svg><br><span>{% trans 'Reject' %}</span>
+                </button>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {% empty %}
+        <h3 class="text-center">{% trans 'Nothing found' %}</h3>
+      {% endfor %}
+      {% if is_paginated %}
+        <span class="pagination d-flex justify-content-center mt-3 mb-5">
+          {% if page_obj.has_previous %}
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#0d6efd">
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+              </svg>
+            </a>
+          {% else %}
+            <span class="page-link">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#6c757d">
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+              </svg>
+            </span>
+          {% endif %}
+            {% for page in page_obj.paginator %}
+              {% if page.number == page_obj.number %}
+                <span class="page-item active">
+                  <a class="page-link" href="?page={{ page.number }}">{{ page.number }}</a>
+                </span>
+              {% else %}
+                <span class="page-item">
+                  <a class="page-link" href="?page={{ page.number }}">{{ page.number }}</a>
+                </span>
+              {% endif %}
+            {% endfor %}
+          {% if page_obj.has_next %}
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#0d6efd">
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+              </svg>
+            </a>
+          {% else %}
+            <span class="page-link">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#6c757d">
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+              </svg>
+            </span>
+          {% endif %}
+        </span>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

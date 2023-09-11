@@ -1,0 +1,6 @@
+{% load i18n %}
+{% autoescape off %}
+{% trans 'Hello' %} {{ username }},
+{% trans 'Your account has successfully created. Please click below link to activate your account' %}
+{{ host }}{% url 'accounts:activate' uidb64=uid token=token %}
+{% endautoescape %}

@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static i18n  %}
+{% load remove_obsolete_pages %}
+{% block title %}{% trans 'Main' %}{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{% static 'posts/js/main.js' %}"></script>
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="row body-form">
+      <div class="form-check form-switch mb-3 d-flex justify-content-center">
+        <input class="form-check-input" type="checkbox" id="visibility" onchange="filter_visibility()" {% if request.method == "POST" %}checked{% endif %}>
+        <label class="form-check-label mx-2">{% trans 'Filter' %}</label>
+        <a href="{% url 'posts:main' %}" class="text-decoration-none ms-5">{% trans 'Recommendations' %}</a>
+      </div>
+      <hr>
+      <div class="p-0" id="filter" {% if request.method == "GET" %}style="display:none"{% endif %}>
+        <form method="get" class="mb-3">
+          {{ filter.form.as_p }}
+          <button type="submit" class="btn btn-primary w-100 mb-2">{% trans 'Apply Filter' %}</button>
+        </form>
+        <hr>
+      </div>
+      {% for activity in activity_list %}
+        <div id="activity-{{ activity.pk }}" class="activity-card card mb-4">
+          <div class="card-body px-2 py-3">
+            <p class="mb-2">{{ activity.title }}</p>
+            <p class="mb-0">{{ activity.get_type_display }}</p>
+            <p class="mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" {% if activity.is_online %}fill="green"{% else %}fill="red"{% endif %} >
+                <path d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+              </svg> {{ activity.get_language_display }}. {{ activity.country.name }}, {{activity.location}}
+            </p>
+            <p class="mb-0 text-secondary">{{ activity.updated_at }}</p>
+            <hr>
+            <div class="mb-2 d-flex flex-wrap text-primary">
+              {% for it in activity.programming_areas.all %}
+                <span class="border border-dark border-2 rounded-pill px-2 mb-1 me-1">{{ it.name }}</span>
+              {% endfor %}
+            </div>
+            <div class="mb-2 d-flex flex-wrap text-success">
+              {% for area in activity.global_areas.all %}
+                <span class="border border-dark border-2 rounded-pill px-2 mb-1 me-1">{{ area.name }}</span>
+              {% endfor %}
+              <hr>
+            </div>
+            <div class="d-flex flex-wrap text-danger">
+              {% for skill in activity.expected_skills.all %}
+                <span class="border border-dark border-2 rounded-pill px-2 mb-1 me-1">{{ skill.name }}</span>
+              {% endfor %}
+            </div>
+            <hr>
+            <div class="mb-3" id="load-{{ activity.pk }}" style="display:none">
+              <div class="bg-white form-control mb-3">
+                <span>{{ activity.description }}</span>
+              </div>
+              <h6 class="ms-1">{% trans 'Created by: '%}
+                <a href="{% url 'accounts:account-detail' activity.owner.pk %}" class="text-decoration-none fw-bold">{{ activity.owner.username }}</a>
+              </h6>
+            </div>
+            <div class="actions">
+              <button class="btn btn-secondary load-more" data-pk="{{ activity.pk }}" onclick="load_more(this)">{% trans 'More' %}</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#replyModal" data-pk="{{ activity.pk }}" onclick="reply(this)">{% trans 'Reply' %}</button>
+              <button class="btn border border-1 ms-3 text-white" data-bs-toggle="modal" data-bs-target="#reportModal" data-pk="{{ activity.pk }}" onclick="report(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="red">
+                  <path d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32V64 368 480c0 17.7 14.3 32 32 32s32-14.3 32-32V352l64.3-16.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L64 48V32z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <h3 class="text-center">{% trans 'Nothing found' %}</h3>
+      {% endfor %}
+      {% if is_paginated %}
+        <span class="pagination d-flex justify-content-center mt-3 mb-5">
+          {% if page_obj.has_previous %}
+            <a class="page-link" href="?{{ request.GET  |remove_obsolete_pages }}&page={{ page_obj.previous_page_number }}">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#0d6efd">
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+              </svg>
+            </a>
+          {% else %}
+            <span class="page-link">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#6c757d">
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+              </svg>
+            </span>
+          {% endif %}
+            {% for page in page_obj.paginator %}
+              {% if page.number == page_obj.number %}
+                <span class="page-item active">
+                  <a class="page-link" href="?page={{ page.number }}">{{ page.number }}</a>
+                </span>
+              {% else %}
+                <span class="page-item">
+                  <a class="page-link" href="?page={{ page.number }}">{{ page.number }}</a>
+                </span>
+              {% endif %}
+            {% endfor %}
+          {% if page_obj.has_next %}
+            <a class="page-link" href="?{{ request.GET|remove_obsolete_pages }}&page={{ page_obj.next_page_number }}">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#0d6efd">
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+              </svg>
+            </a>
+          {% else %}
+            <span class="page-link">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#6c757d">
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+              </svg>
+            </span>
+          {% endif %}
+        </span>
+      {% endif %}
+      <div class="modal fade" id="replyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <label class="form-label">{% trans 'Comment' %}</label>
+              <input type="hidden" id="reply_pk">
+              <textarea class="form-control" rows="2" placeholder="{% trans 'Up to 512 characters' %}" id="reply_comment" maxlength="512"></textarea>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button class="btn btn-danger mx-2" data-bs-dismiss="modal">{% trans 'Cancel' %}</button>
+              <button class="btn btn-primary mx-2" data-bs-dismiss="modal" onclick="send_reply()">{% trans 'Сonfirm' %}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="reportModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <input type="hidden" id="report_pk">
+              <label class="form-label">{% trans 'Reason' %}</label>
+              <select class="form-select mb-2" id="report_reason">
+                <option value="" selected>{% trans 'Select reason' %}</option>
+                <option value="1">{% trans 'Unacceptable content' %}</option>
+                <option value="2">{% trans 'Fraud' %}</option>
+                <option value="3">{% trans 'Language and activity does not match' %}</option>
+              </select>
+              <label class="form-label">{% trans 'Message' %}</label>
+              <textarea class="form-control" rows="2" placeholder="{% trans 'Up to 255 characters' %}" id="report_message" maxlength="255"></textarea>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button class="btn btn-danger mx-2" data-bs-dismiss="modal">{% trans 'Cancel' %}</button>
+              <button class="btn btn-primary mx-2" data-bs-dismiss="modal" onclick="send_report()">{% trans 'Сonfirm' %}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
